@@ -7,8 +7,13 @@
     <meta name="description"
         content="A multi-platform 2D and 3D game engine focused solely on technology and user experience">
     <title>WeDot Engine</title>
+    <link rel="icon" type="image/svg+xml" href="/img/testicon.png">
     <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css">
     <style>
+        html {
+            height: 100%;
+        }
+
         * {
             margin: 0px;
             padding: 0px;
@@ -18,20 +23,27 @@
         body {
             font-family: 'Exo', sans-serif;
         }
-
-        .context {
+    </style>
+    <style>
+        .container {
+            height: 100%;
             width: 100%;
             position: absolute;
-            top: 50vh;
+            left: 0;
+            top: 0;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            justify-content: center;
         }
 
-        .context h1 {
+        .container h1 {
             text-align: center;
             color: #fff;
             font-size: 50px;
         }
 
-        .context .btn {
+        .container .contact {
             margin-top: 1rem;
             text-align: center;
             display: flex;
@@ -42,18 +54,18 @@
             font-size: 30px;
         }
 
-        .context .btn a {
+        .container .contact a {
             text-decoration: none;
             color: inherit;
             align-items: center;
             border-radius: .5rem;
             box-sizing: border-box;
             display: flex;
-            margin-top: 1rem;
             padding: .5rem;
             text-align: center;
         }
-
+    </style>
+    <style>
         .area {
             background: #4e54c8;
             background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -189,12 +201,14 @@
         </ul>
     </div>
 
-    <div class="context">
-        <h1>WeDot Engine</h1>
-        <div class="btn">
-            <a href="https://github.com/Wedot-Engine"><i class="fab fa-github"></i></a>
-            <a
-                href="https://qm.qq.com/cgi-bin/qm/qr?authKey=uWaS3hfqckw9Dw67msDFkkfNaH0et%2BBrYLH5pFIivTkPUveecXmzItEIlyAOU%2BPH&k=YPHK8nGsi-5HuL7isYw3eHshrLolBVpo&noverify=0"><i
+    <div class="container">
+        <img alt="Temporary Icon" title="Temporary Icon" src="/img/testicon.png"></img>
+        <h1 title="A multi-platform 2D and 3D game engine focused solely on technology and user experience">WeDot Engine
+        </h1>
+        <div class="contact">
+            <a title="Github" href="https://github.com/Wedot-Engine"><i class="fab fa-github"></i></a>
+            <a title="QQ"
+                href="https://qm.qq.com/cgi-bin/qm/qr?authKey=G%2BR%2FKlLQBeH71b1Mhe4t2gM%2B8rLXndOEPhPtDgWgTudLUtGUgpMrNAWD87x%2F64ta&k=IPTGQ3zH_W8IAzaFrnLLGF2kplhv-EeM&noverify=0&group_code=670915303"><i
                     class="fab fa-qq"></i></a>
         </div>
     </div>
