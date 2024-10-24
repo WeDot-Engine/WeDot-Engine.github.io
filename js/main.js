@@ -227,5 +227,6 @@
             SetupGiscus(getCurrentLanguage());   //// 初始化评论系统
         }
         translate.execute();
+        translate.selectLanguageTag.refreshRender();
     });
 })();
