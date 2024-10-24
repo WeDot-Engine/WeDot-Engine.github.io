@@ -22,49 +22,63 @@
         body {
             font-family: 'Exo', sans-serif;
         }
+        
+        a {
+            cursor: pointer;
+        }
+        
+        .max-width {
+            max-width: 1024px;
+            width: 100%;
+        }
 
         /* 导航栏 */
         nav {
-            position: absolute;
-            left: 0;
-            top: 0;
             width: 100%;
             box-sizing: border-box;
             background-color: rgba(0, 0, 0, 0.2);
             color: #fff;
-            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav .logo img,
+        nav .logo svg {
+            width: 30px;
+            margin: 1rem;
+        }
+        
+        nav .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav ul {
+        nav .ul {
+            height: 100%;
+            align-items: center;
+            margin-right: 1rem;
             list-style: none;
             display: flex;
-            gap: 1rem;
         }
 
-        nav ul li {
+        nav .ul a {
             display: inline;
-        }
-
-        nav ul li a {
+            position: relative;
             color: #fff;
             text-decoration: none;
             padding: 0.5rem 1rem;
-            border-radius: 5px;
+            box-sizing: border-box;
             transition: background-color 0.3s;
         }
 
-        nav ul li a:hover {
+        nav .ul a:hover {
             background-color: #555;
         }
 
         /* 主要内容 */
         .container {
-            width: 100%;
-            max-width: 1024px;
-            margin: 8rem auto;
+            margin: 6rem auto;
             box-sizing: border-box;
             padding: 1rem;
             flex-direction: column;
@@ -275,15 +289,11 @@
             opacity: 0;
             cursor: pointer;
             position: absolute;
+            top: 0;
             left: 0
         }
 
         /* 深色模式相关 */
-        .darkmode-layer,
-        .darkmode-toggle {
-            z-index: 101
-        }
-
         .darkmode--activated img,
         .darkmode--activated svg {
             isolation: isolate;
@@ -434,6 +444,7 @@
 </head>
 
 <body>
+    <!-- 背景 -->
     <div class="area">
         <ul class="circles">
             <li></li>
@@ -449,22 +460,27 @@
         </ul>
     </div>
 
+    <!-- 导航栏 -->
     <nav>
-        <div class="logo">
-            <img alt="Temporary Icon" title="Temporary Icon" src="/img/wedot.png" style="height: 30px;">
+        <div class="nav-content max-width">
+            <div class="logo">
+                <img alt="Temporary Icon" title="Temporary Icon" src="/img/wedot.png">
+            </div>
+            <div class="ul">
+                <a title="Home page"><i class="fa fa-home"></i> Home</a>
+                <a title="WeDot Form" href="form"><i class="fa fa-comment"></i> Form</a>
+                <a title="About the WeDot Engine" href="https://github.com/Wedot-Engine"><i
+                            class="fa fa-info-circle"></i> About</a>
+                <a title="Change the language of this site" id="translate"><i class="fa fa-language"></i>
+                        Language</a>
+                <!-- <a title="Change display mode" id="dark_b" href="javascript:;"><i class="fa fa-adjust"></i> Mode</a> -->
+                
+            </div>
         </div>
-        <ul>
-            <li><a title="Home page"><i class="fa fa-home"></i> Home</a></li>
-            <li><a title="WeDot Form" href="form"><i class="fa fa-comment"></i> Form</a></li>
-            <li><a title="About the WeDot Engine" href="https://github.com/Wedot-Engine"><i
-                        class="fa fa-info-circle"></i> About</a></li>
-            <li><a title="Change the language of this site" id="translate"><i class="fa fa-language"></i> Language</a></li>
-            <!-- <li><a title="Change display mode" id="dark_b" href="javascript:;"><i class="fa fa-adjust"></i> Mode</a> -->
-            </li>
-        </ul>
     </nav>
 
-    <div class="container">
+    <!-- 主要内容 -->
+    <div class="container max-width">
         <img class="main-logo" alt="Temporary Icon" title="Temporary Icon" src="/img/wedot.png"></img>
         <exegesis>↑ Temporary Icon ↑ :-)</exegesis>
         <h1 title="A multi-platform 2D and 3D game engine focused solely on technology and user experience">WeDot Engine
