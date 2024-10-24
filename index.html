@@ -353,6 +353,7 @@
                     translate.service.use('client.edge');
                     translate.listener.start();
                     translate.setAutoDiscriminateLocalLanguage();
+                    translate.language.setLocal('english'); 
                     translate.language.setUrlParamControl();
                     translate.ignore.class.push('notTranslate');
                     translate.nomenclature.append('english', 'chinese_simplified', `
