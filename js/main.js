@@ -47,6 +47,14 @@
                 Home page=主页
                 About=关于
             `);
+            translate.nomenclature.append('english', 'chinese_traditional', `
+                WeDot Engine=衆點引擎
+                WeDot Forum=衆點論壇
+                WeDot=衆點
+                Home=主頁
+                Home page=主頁
+                About=關於
+            `);
             translate.execute();
         } catch (e) {
             console.error('翻译系统出错：' + e);
@@ -218,5 +226,6 @@
         if (document.getElementById("giscus-container") != null) {
             SetupGiscus(getCurrentLanguage());   //// 初始化评论系统
         }
+        translate.execute();
     });
 })();
