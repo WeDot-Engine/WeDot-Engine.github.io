@@ -275,6 +275,7 @@ nav .ul a:hover {
 
 /* 翻译按钮相关 */
 .translateSelectLanguage {
+    background-color: #555;
     z-index: 10;
     width: 100%;
     height: 100%;
@@ -299,6 +300,6 @@ nav .ul a:hover {
 }
 
 .darkmode--activated select {
-    background-color: #000;
-    color: #E0E0E0
+    background-color: #E0E0E0;
+    color: #000
 }
