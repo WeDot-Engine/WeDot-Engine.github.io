@@ -206,6 +206,12 @@
             progress.style.width = loadingBarWidth + "%";
         }, 500);
     });
+    //// 翻译执行完成后触发
+    translate.listener.renderTaskFinish = function (_task) {
+        if (document.getElementById("giscus-container") != null) {
+            SetupGiscus(getCurrentLanguage());   //// 初始化评论系统
+        }
+    }
     //// 监听 Pjax 完成后加载
     document.addEventListener("pjax:complete", function () {
         endLoad();
