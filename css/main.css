@@ -25,6 +25,42 @@ a {
     width: 100%;
 }
 
+/* 元素加载 */
+.on-load {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.on-load::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    /* 负值为高度的一半 */
+    margin-left: -25px;
+    /* 负值为宽度的一半 */
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #ccc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* 导航栏 */
 nav {
     width: 100%;
