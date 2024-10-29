@@ -4,10 +4,10 @@ html {
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: #FAFAFA;
     text-decoration: none;
 }
 

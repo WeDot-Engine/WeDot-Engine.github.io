@@ -5,9 +5,21 @@
     var timer = null;
     let pjax;
 
+    // 初始化加载动画相关元素
     function initAni() {
         loadingBar = document.querySelector(".loading-bar");
         progress = document.querySelector(".loading-bar .progress");
+    }
+
+    // 停止加载动画
+    function endLoad() {
+        clearInterval(timer);
+        progress.style.width = "100%";
+        loadingBar.classList.remove("loading");
+
+        setTimeout(function () {
+            progress.style.width = 0;
+        }, 400);
     }
 
     // 初始化 PJAX
@@ -168,16 +180,6 @@
         } catch (e) {
             console.error('初始化 Darkmode.js 出错：' + e);
         }
-    }
-
-    function endLoad() {
-        clearInterval(timer);
-        progress.style.width = "100%";
-        loadingBar.classList.remove("loading");
-
-        setTimeout(function () {
-            progress.style.width = 0;
-        }, 400);
     }
 
     // 初始化
