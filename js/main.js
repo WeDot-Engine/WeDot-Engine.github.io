@@ -117,7 +117,7 @@
         giscus_lang = "it";
         break;
       default:
-        giscus_lang = "en";
+        giscus_lang = "zh-CN";
         break;
     }
     return giscus_lang;
