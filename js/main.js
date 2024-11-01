@@ -48,24 +48,12 @@
             translate.service.use('client.edge');
             translate.listener.start();
             translate.setAutoDiscriminateLocalLanguage();
-            translate.language.setLocal('english');
+            translate.language.setLocal('chinese_simplified');
             translate.language.setUrlParamControl();
             translate.ignore.class.push('notTranslate');
-            translate.nomenclature.append('english', 'chinese_simplified', `
-                WeDot Engine=众点引擎
-                WeDot Forum=众点论坛
-                WeDot=众点
-                Home=主页
-                Home page=主页
-                About=关于
-            `);
-            translate.nomenclature.append('english', 'chinese_traditional', `
-                WeDot Engine=衆點引擎
-                WeDot Forum=衆點論壇
-                WeDot=衆點
-                Home=主頁
-                Home page=主頁
-                About=關於
+            translate.nomenclature.append('chinese_simplified', 'english', `
+                主页=home
+                关于=about
             `);
             translate.execute();
         } catch (e) {
@@ -75,7 +63,7 @@
     //// 获取用户使用的语种并转换为 giscus 可识别的标记
     const getCurrentLanguage = function () {
         var lang = translate.language.getCurrent();
-        var giscus_lang = "en";
+        var giscus_lang = "zh-CN";
         switch (lang) {
             case "chinese_simplified":
                 giscus_lang = "zh-CN";
