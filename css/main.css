@@ -131,8 +131,7 @@ nav .ul a:hover {
 }
 
 .container p {
-  margin-top: -1.2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   text-align: center;
   font-size: 20px;
 }
@@ -142,6 +141,7 @@ nav .ul a:hover {
 }
 
 .container .main-logo {
+  margin-bottom: -4rem;
   width: 75%;
   max-width: 512px;
 }
